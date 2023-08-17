@@ -35,6 +35,14 @@ vector<int> generateUniqueVector(int n, int lo, int hi) {
     return res;
 }
 
+string generateBinaryString(int n) {
+    string res;
+    for (int x:generateUniqueVector(n, 0, 1)) {
+        res.push_back(x + '0');
+    }
+    return res;
+}
+
 // MAIN
 signed main(int argc, char* argv[]) {
     srand(atoi(argv[1]));
